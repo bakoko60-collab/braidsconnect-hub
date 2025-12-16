@@ -1,0 +1,386 @@
+/* ===== RESET ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0b1020;
+  color: #0b1020;
+}
+
+/* ===== HERO ===== */
+.px-hero {
+  min-height: 85vh;
+  width: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.15)),
+    url("images/01.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 0 1.5rem 3rem;
+}
+
+.px-hero-inner {
+  max-width: 900px;
+  color: #ffffff;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.px-hero-title-main {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 4.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.px-hero-title-sub {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 2.9rem;
+  margin-top: 0.6rem;
+}
+
+.px-hero-tagline {
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2.8rem;
+}
+
+/* HERO BUTTONS */
+.px-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.px-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  padding: 0.9rem 2.8rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: #003366;
+  color: #ffffff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* same style for both hero buttons */
+.px-btn-primary {}
+.px-btn-secondary {}
+
+.px-btn:hover {
+  background: #004080;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+}
+
+/* Home button in gallery – slightly wider */
+.px-btn-home {
+  min-width: 220px;
+}
+
+/* ===== MAIN SECTION / GALLERY WRAPPER ===== */
+.px-section {
+  padding: 4rem 1.5rem 4.5rem;
+  background: #eef2ff;
+}
+
+.px-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.px-section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.px-section-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  color: #111827;
+}
+
+.px-section-subtitle {
+  font-size: 1.05rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.8rem;
+  color: #4b5563;
+}
+
+/* ===== CATEGORY BLOCKS ===== */
+.px-category {
+  margin-bottom: 3rem;
+}
+
+.px-category-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+  color: #111827;
+}
+
+.px-category-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+/* 4:3 STATIC CONTAINERS */
+.px-image-frame {
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.4);
+  aspect-ratio: 4 / 3;        /* <<< keeps 4:3 ratio for every photo */
+  display: block;
+}
+
+.px-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== GALLERY HOME BUTTON ===== */
+.px-gallery-home {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.px-footer {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 1.7rem 1.5rem;
+  text-align: center;
+}
+
+.px-footer-text {
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .px-hero-title-main {
+    font-size: 3.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .px-hero-title-sub {
+    font-size: 2.2rem;
+  }
+
+  .px-hero-tagline {
+    font-size: 1.3rem;
+  }
+
+  .px-category-row {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .px-section {
+    padding-top: 3rem;
+  }
+
+  .px-category-row {
+    grid-template-columns: 1fr;
+  }
+
+  .px-image-frame {
+    border-radius: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .px-hero {
+    padding: 0 1.2rem 2.5rem;
+  }
+
+  .px-hero-title-main {
+    font-size: 2.6rem;
+    letter-spacing: 0.06em;
+  }
+
+  .px-hero-title-sub {
+    font-size: 1.9rem;
+  }
+
+  .px-hero-tagline {
+    font-size: 1.15rem;
+    margin-top: 1.4rem;
+    margin-bottom: 2.1rem;
+  }
+
+  .px-hero-buttons {
+    flex-direction: column;
+  }
+
+  .px-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+/* ================== HEADER (PRINTEXPRESS) ================== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left: site name */
+.logo span {
+  font-family: inherit;          /* use same sans-serif as rest of site */
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 1.0rem;
+  color: #111827;
+}
+
+/* Right: nav */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  opacity: 0.75;
+}
+/* ================== CONTACT PAGE LAYOUT ================== */
+.px-contact-page {
+  padding: 4rem 0 5rem;
+}
+
+.px-contact-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Left: info block */
+.px-contact-info-block {
+  flex: 1 1 260px;
+}
+
+/* Right: form block */
+.px-contact-form-block {
+  flex: 1 1 320px;
+}
+
+/* Form styling */
+.px-contact-form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.px-form-row {
+  margin-bottom: 1rem;
+}
+
+.px-form-row label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.px-form-row input,
+.px-form-row textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font: inherit;
+}
+
+/* Button row */
+.px-form-actions {
+  margin-top: 1rem;
+}
+
+/* Stack nicely on small screens */
+@media (max-width: 768px) {
+  .px-contact-layout {
+    flex-direction: column;
+  }
+}

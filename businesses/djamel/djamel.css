@@ -1,0 +1,319 @@
+/* ============================
+   DJAMEL AFRICAN MARKET THEME
+   Clean replacement stylesheet
+   ============================ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----------- HERO SECTION ----------- */
+
+.business-hero {
+  background: #f7f3ff;
+  padding: 3.5rem 0 3rem;
+}
+
+.business-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.business-hero-text {
+  flex: 1;
+  max-width: 540px;
+}
+
+/* Small label above the title */
+.business-tagline {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: #8a6cff;
+  margin-bottom: 0.4rem;
+}
+
+.business-hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+/* Sentence under the title */
+.business-hero-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #463f66;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons row */
+.business-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.business-hero-actions .btn {
+  font-size: 0.95rem;
+  padding: 0.7rem 1.6rem;
+}
+
+/* Address + phone block under buttons */
+.business-hero-contact {
+  font-size: 0.98rem; /* slightly larger for readability */
+  line-height: 1.5;
+  color: #241b4a;
+}
+
+.business-hero-contact a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Right-hand hero image */
+
+.business-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.business-hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1.6rem;
+  display: block;
+  box-shadow: 0 18px 45px rgba(32, 7, 75, 0.32);
+}
+
+/* ----------- GENERIC BUSINESS SECTIONS ----------- */
+
+.business-section {
+  padding: 4rem 0;
+}
+
+/* ----------- INTRO / STORY SECTION ----------- */
+
+.business-intro {
+  background: #ffffff;
+}
+
+.business-intro-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.business-intro-text {
+  flex: 1.1;
+}
+
+.business-intro-text h2 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: #a086ff;
+  margin-bottom: 0.7rem;
+}
+
+.business-intro-text p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #383654;
+  margin-bottom: 0.9rem;
+}
+
+.business-intro-text .btn {
+  margin-top: 0.6rem;
+}
+
+/* Large supporting image on the right */
+
+.business-intro-image {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.business-intro-image img {
+  width: 100%;
+  max-width: 470px;
+  border-radius: 1.6rem;
+  box-shadow: 0 18px 45px rgba(22, 4, 65, 0.28);
+}
+
+/* ----------- DEPARTMENTS / SERVICES GRID ----------- */
+
+.services {
+  background: #f9f6ff;
+}
+
+.services .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.6rem;
+}
+
+.section-header h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #6b6688;
+}
+
+/* 3 cards across on desktop */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.25rem 1.25rem 1.6rem;
+  box-shadow: 0 12px 35px rgba(21, 6, 63, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #423f5a;
+}
+
+/* ----------- CONTACT / FOOTER BAND FOR DJAMEL PAGE ----------- */
+
+.business-contact {
+  background: #120d2b;
+  color: #f7f3ff;
+}
+
+.business-contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.2rem;
+  align-items: flex-start;
+}
+
+.business-contact-block h2,
+.business-contact-block h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+}
+
+.business-contact-block p,
+.business-hours li {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.business-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.business-hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ----------- RESPONSIVE ADJUSTMENTS ----------- */
+
+@media (max-width: 960px) {
+  .business-hero-inner,
+  .business-intro-inner,
+  .business-contact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .business-hero-image,
+  .business-intro-image {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .business-hero-image img,
+  .business-intro-image img {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .business-hero {
+    padding: 2.5rem 0 2.3rem;
+  }
+
+  .business-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .business-intro-text h2,
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-contact-inner {
+    gap: 1.6rem;
+  }
+}
+

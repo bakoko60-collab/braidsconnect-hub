@@ -1,0 +1,87 @@
+/* ============================================
+   FATIMA – PAGE OVERRIDES
+   (Keeps hub styles; only tweaks for this page)
+   ============================================ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero look for Fatima */
+.hero-fatima {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 55%),
+    linear-gradient(135deg, #312e81, #7c3aed); /* deep indigo -> purple */
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Tighten width inside the hero */
+.hero-fatima .hero-text {
+  max-width: 520px;
+}
+
+/* Tagline + meta text */
+.hero-fatima .hero-tagline {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-fatima .hero-meta {
+  font-size: 0.98rem;
+  opacity: 0.9;
+  margin-bottom: 1.4rem;
+}
+
+/* Coming soon pill */
+.hero-fatima .coming-badge {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background-color: rgba(15, 23, 42, 0.9);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+/* Hub buttons on this page */
+.fatima-hub-btn {
+  margin-top: 0.3rem;
+}
+
+/* Light info section */
+.fatima-soon {
+  padding: 4rem 1.5rem 5rem;
+  background: #f4f4ff;
+}
+
+.fatima-soon-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.fatima-soon-inner h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.fatima-soon-inner p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.7rem;
+}

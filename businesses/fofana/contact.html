@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fofana Express – Booking & Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main site styles (buttons, fonts, etc.) -->
+  <link rel="stylesheet" href="fofana.css" />
+
+  <!-- Small layout-only styles for this page -->
+  <style>
+    /* PAGE LAYOUT */
+    .px-contact-page {
+      min-height: 100vh;
+      padding: 4rem 1.5rem 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      /* Same background approach as before */
+      background: #eef2ff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .px-contact-inner {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      gap: 3rem;
+      color: #ffffff;
+    }
+
+    .px-contact-left {
+      flex: 2 1 0;
+    }
+
+    .px-contact-right {
+  flex: 1.4 1 0;      /* give this column more width */
+  max-width: 480px;   /* wider text block so lines don’t break awkwardly */
+  align-self: flex-end;
+}
+
+
+    @media (max-width: 900px) {
+      .px-contact-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .px-contact-right {
+        align-self: stretch;
+      }
+    }
+
+    /* TYPOGRAPHY */
+   /* TYPOGRAPHY */
+.px-contact-title {
+  font-family: "Playfair Display", "Times New Roman", serif;  /* same style as gallery heading */
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+  color: #000000;  /* black */
+}
+
+.px-contact-intro {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #000000;  /* black */
+}
+
+.px-contact-right h2 {
+  font-size: 1.7rem;      /* bigger title */
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.px-contact-right p {
+  margin-bottom: 0.55rem; /* more breathing room between lines */
+  font-size: 1.08rem;     /* bigger body text */
+  color: #000000;
+}
+
+
+.px-contact-right a {
+  color: #000000;  /* black links */
+}
+
+.px-contact-credit {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+  color: #000000;  /* black */
+}
+
+.px-contact-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #000000;  /* black */
+}
+
+    .px-contact-form-group input,
+    .px-contact-form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.45rem;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      font: inherit;
+      outline: none;
+    }
+
+    .px-contact-form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+
+    .px-contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+    }
+
+    .px-contact-buttons .px-btn {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="px-contact-page">
+    <div class="px-contact-inner">
+
+      <!-- LEFT: FORM -->
+      <section class="px-contact-left">
+        <h1 class="px-contact-title">Contact Us</h1>
+
+        <p class="px-contact-intro">
+          Tell us what you need for your next braids appointment. We’ll confirm
+          availability, style details, and pricing as soon as possible.
+        </p>
+
+        <form class="px-contact-form" action="mailto:bakoko60@gmail.com" method="post" enctype="text/plain">
+          <div class="px-contact-form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="Name" required />
+          </div>
+
+          <div class="px-contact-form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="Email" required />
+          </div>
+
+          <div class="px-contact-form-group">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="Phone" required />
+          </div>
+
+          <div class="px-contact-form-group">
+            <label for="details">Message / style details</label>
+            <textarea id="details" name="Message"></textarea>
+          </div>
+
+          <!-- BUTTONS MOVED UP HERE (service select removed) -->
+          <div class="px-contact-buttons">
+            <button type="submit" class="px-btn px-btn-primary">Send request</button>
+            <a href="tel:15167389056" class="px-btn px-btn-secondary">Call</a>
+          <a href="fofana.html#top" class="px-btn px-btn-secondary">Home</a>
+
+          </div>
+        </form>
+      </section>
+
+      <!-- RIGHT: BUSINESS INFO -->
+      <aside class="px-contact-right">
+  <h2>FOFANA EXPRESS Hair Braiding</h2>
+  <p>509 W 125th St, 2nd Floor, New York, NY 10027</p>
+  <p>Phone 1: 516-738-9056 / Phone 2: 000-000-0000</p>
+  <p>Open 7 days · Walk-ins &amp; appointments welcome.</p>
+
+  <p class="px-contact-credit">
+    Site Designed by PrintExpress@2025
+  </p>
+</aside>
+
+
+    </div>
+  </main>
+
+</body>
+</html>

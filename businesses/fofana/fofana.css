@@ -1,0 +1,495 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #020617; /* deep navy base */
+  color: #f9fafb;
+}
+
+/* ===== GLOBAL BUTTONS ===== */
+.px-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  padding: 0.9rem 2.8rem;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: none;
+  background: #0050c8;   /* solid blue for ALL buttons */
+  color: #ffffff;        /* white text for ALL buttons */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* keep these empty so they DO NOT change the color */
+.px-btn-primary {}
+.px-btn-secondary {}
+
+
+.px-btn-primary {
+  background: #0057b7;
+}
+
+.px-btn-secondary {
+  background: #0f172a;
+}
+
+.px-btn:hover {
+  background: #0b69d6;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+}
+
+.px-btn-home {
+  min-width: 220px;
+}
+
+/* ===== HERO ===== */
+.px-hero {
+  min-height: 85vh;
+  width: 100%;
+  background:
+    linear-gradient(to bottom, rgba(5, 10, 25, 0.15), rgba(5, 10, 25, 0.3)),
+    url("images/01.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+  padding: 0 6vw 3rem;
+}
+
+.px-hero-inner {
+  max-width: 640px;
+  color: #ffffff;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+.px-hero-title-main {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 4.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;    /* forces “FOFANA EXPRESS” onto a single line */
+}
+
+
+.px-hero-title-sub {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+
+.px-hero-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.px-hero-address {
+  font-size: 1.02rem;
+  margin-bottom: 2.2rem;
+}
+
+.px-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+}
+
+/* ===== MAIN STYLES / GALLERY ===== */
+.px-section {
+  padding: 4.5rem 1.5rem 4.5rem;
+  background: #e8edff; /* light, salon-friendly background */
+  color: #111827;
+}
+
+.px-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.px-section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.px-section-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  color: #111827;
+}
+
+.px-section-subtitle {
+  font-size: 1.05rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.8rem;
+  color: #4b5563;
+}
+
+/* CATEGORY BLOCKS */
+.px-category {
+  margin-bottom: 3rem;
+}
+
+.px-category-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+  color: #111827;
+}
+
+.px-category-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+/* IMAGE FRAMES (4:3 ratio, big cards like PrintExpress) */
+.px-image-frame {
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.4);
+  aspect-ratio: 3 / 4;        /* portrait shape */
+  display: block;
+}
+
+
+.px-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* GALLERY HOME BUTTON */
+.px-gallery-home {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.px-footer {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 1.7rem 1.5rem;
+  text-align: center;
+}
+
+.px-footer-text {
+  font-size: 0.95rem;
+}
+
+/* ===== CONTACT PAGE ===== */
+.px-contact-page {
+  min-height: 100vh;
+  padding: 4rem 1.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #eef2ff;
+}
+
+.px-contact-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  gap: 3rem;
+  color: #f9fafb;
+}
+
+.px-contact-left {
+  flex: 2 1 0;
+}
+
+.px-contact-right {
+  flex: 1 1 0;
+  align-self: flex-end;
+}
+
+/* Contact typography */
+.px-contact-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.px-contact-intro {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+.px-contact-right h2 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.px-contact-right p {
+  margin-bottom: 0.35rem;
+  font-size: 0.96rem;
+  color: #e5e7eb;
+}
+
+.px-contact-right a {
+  color: #93c5fd;
+}
+
+.px-contact-credit {
+  margin-top: 1.6rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* Contact form */
+.px-contact-form-group {
+  margin-bottom: 1.1rem;
+}
+
+.px-contact-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #e5e7eb;
+}
+
+.px-contact-form-group input,
+.px-contact-form-group textarea,
+.px-contact-form-group select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.45rem;
+  border: 1px solid rgba(15, 23, 42, 0.35);
+  font: inherit;
+  outline: none;
+}
+
+.px-contact-form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.px-contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.4rem;
+}
+
+.px-contact-buttons .px-btn {
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .px-hero {
+    padding: 0 1.8rem 2.5rem;
+  }
+
+  .px-hero-title-main {
+    font-size: 3.2rem;
+    letter-spacing: 0.08em;
+  }
+
+  .px-hero-title-sub {
+    font-size: 2rem;
+  }
+
+  .px-category-row {
+    gap: 1.2rem;
+  }
+
+  .px-contact-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .px-contact-right {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 800px) {
+  .px-section {
+    padding-top: 3rem;
+  }
+
+  .px-category-row {
+    grid-template-columns: 1fr;
+  }
+
+  .px-image-frame {
+    border-radius: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .px-hero {
+    padding: 0 1.2rem 2.5rem;
+  }
+
+  .px-hero-title-main {
+    font-size: 2.5rem;
+    letter-spacing: 0.06em;
+  }
+
+  .px-hero-title-sub {
+    font-size: 1.7rem;
+  }
+
+  .px-hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .px-hero-address {
+    font-size: 0.98rem;
+  }
+
+  .px-hero-buttons {
+    flex-direction: column;
+  }
+
+  .px-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+/* Force hub-style buttons on Fofana to use the same blue look */
+.btn,
+.btn.primary-btn,
+.btn.secondary-btn {
+  background-color: #0050c8;  /* blue button */
+  color: #ffffff;             /* white text */
+  border: none;
+}
+/* ================== HEADER (FOFANA) ================== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo span {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  opacity: 0.75;
+}
+/* ================== HEADER (FOFANA) ================== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left: site name */
+.logo span {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+/* Right: nav */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  opacity: 0.75;
+}
