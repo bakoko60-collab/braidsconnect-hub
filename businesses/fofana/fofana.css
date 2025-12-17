@@ -493,3 +493,38 @@ body {
 .main-nav a:hover {
   opacity: 0.75;
 }
+/* ================== MOBILE HEADER – FOFANA ================== */
+@media (max-width: 768px) {
+  /* Let header grow vertically on phones */
+  .site-header {
+    height: auto;
+  }
+
+  /* Stack logo on top, nav under it */
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.25rem 0.6rem;
+  }
+
+  /* Slightly smaller logo text so "FOFANA EXPRESS HAIR BRAIDING" fits better */
+  .logo span,
+  .logo a {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  /* Make nav links wrap neatly, left-aligned */
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.45rem;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+}
