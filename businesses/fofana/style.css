@@ -1,0 +1,653 @@
+/* =========================================
+   BRAIDCONNECT – CLEAN BASE STYLES
+   ========================================= */
+
+/* ----- Reset ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;  /* stops left–right scrolling */
+}
+
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Make images behave nicely in cards & sections */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Accessibility skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+/* ----- Layout helpers ----- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================================
+   HEADER / NAV
+   ========================================= */
+
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;   /* add this */
+}
+
+
+.main-nav a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #111827;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #a855f7;
+  transition: width 0.18s ease-out;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* =========================================
+   HERO SECTION (PHOTO 3 LOOK)
+   ========================================= */
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  /* same background feel as your “wow” version */
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  ),
+  url("images/02.jpg");
+  background-size: cover;
+  /* this position frames the eye + smile similar to Photo 3 */
+  background-position: 50% 38%;
+}
+
+.hero-inner {
+  width: 100%;
+  padding: 4.5rem 0 5rem;
+}
+
+.hero-text {
+  max-width: 480px;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-start;  /* left-aligned under the text */
+  gap: 0.75rem;
+}
+
+/* Both hero buttons: same pill width */
+.hero-main-btn {
+  width: 260px;
+  justify-content: center;
+}
+
+
+
+/* Slightly smaller font so the long label fits cleanly */
+.hero-members-btn {
+  font-size: 0.9rem;
+}
+
+/* Big, strong headline (stays on one line for “BraidConnect Hub”) */
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease-out,
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out;
+}
+
+.primary-btn {
+  background: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(168, 85, 247, 0.55);
+}
+
+.primary-btn:hover {
+  background: #7c3aed;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.55);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #a855f7;
+  color: #7c3aed;
+}
+
+.secondary-btn:hover {
+  background: rgba(168, 85, 247, 0.06);
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.about-image img {
+  border-radius: 26px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+/* =========================================
+   SERVICES SECTION (3 CARDS WITH #01, #09, #11)
+   ========================================= */
+
+.services {
+  padding: 5rem 0 4.5rem;
+  background: #faf5ff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+  color: #6b7280;
+}
+
+/* 3 cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* single card */
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(148, 163, 184, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* image inside card – keep full photo, no cropping */
+.service-image {
+  width: 100%;
+  height: 210px;       /* keep cards same height */
+  object-fit: contain; /* show full image, no cropped heads */
+  background: #ffffff; /* white “frame” where there’s extra space */
+}
+
+/* card text */
+.service-card h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 1.5rem 0.35rem;
+}
+
+.service-card p {
+  margin: 0 1.5rem 1.5rem;
+  color: #4b5563;
+}
+
+/* services CTA button */
+.services-cta {
+  margin-top: 2.75rem;
+  text-align: center;
+}
+
+/* =========================================
+   BRAIDCONNECT MEMBERS (HUB DIRECTORY)
+   ========================================= */
+
+.members {
+  padding: 5rem 0 4.5rem;
+  background: #f9fafb;
+}
+
+/* 3 cards per row on desktop, wraps for more members */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* single card */
+.member-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(148, 163, 184, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* image in card – slightly smaller than services cards */
+.member-image {
+  width: 100%;
+  height: 180px;      /* smaller height */
+  object-fit: cover;
+}
+
+/* text area */
+.member-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.member-body h3 {
+  font-size: 1rem;
+}
+
+.member-body p {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+/* button inside card (reuses .btn + .primary-btn) */
+/* button inside member cards: a bit smaller */
+.member-btn {
+  margin-top: 0.25rem;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;  /* smaller height + width */
+  font-size: 0.85rem;       /* smaller text */
+}
+
+/* Titi card – live page, keep centered */
+.member-card.titi-centered {
+  text-align: center;
+}
+
+.member-card.titi-centered .member-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* “coming soon” style (no site yet) */
+.member-card.coming-soon {
+  opacity: 0.85;
+  text-align: center;   /* force text + button to align like other cards */
+}
+
+.member-card.coming-soon .member-btn {
+  background: #e5e7eb;
+  color: #6b7280;
+  box-shadow: none;
+  cursor: default;
+  margin-left: auto;   /* NEW */
+  margin-right: auto;  /* NEW */
+}
+
+.member-card.coming-soon .member-btn:hover {
+  background: #e5e7eb;
+  transform: none;
+}
+
+
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact {
+  padding: 5rem 0 4.5rem;
+  background: #ffffff;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* form elements */
+.contact-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+/* contact info side */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-block h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.contact-block p,
+.contact-block li,
+.contact-block a {
+  color: #374151;
+}
+
+.contact-block a {
+  color: #8b5cf6;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+/* hours list */
+.contact-block.hours ul {
+  list-style: none;
+}
+
+.contact-block.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.75rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-credit p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .about-inner,
+  .services-grid,
+  .contact-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .services-grid {
+    gap: 1.5rem;
+  }
+
+  .hero {
+    background-position: 50% 45%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .members-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ---------- FOOTER HOME BUTTON ---------- */
+.footer-home-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn-home-footer {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-home-footer:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+/* ---------- CONTACT FORM ACTIONS (SUBMIT + HOME) ---------- */
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.home-inline-btn {
+  text-align: center;
+}
+/* =========================================
+   MOBILE TWEAKS – HUB ONLY
+   ========================================= */
+@media (max-width: 768px) {
+  /* Header: stack logo + menu nicely */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0.75rem 1.5rem 0.5rem;
+  }
+
+  .logo a {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .main-nav ul {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Cards: 1 per row on small screens */
+  .services-grid,
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Give cards a little breathing room from the edges */
+  .services,
+  .members {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
