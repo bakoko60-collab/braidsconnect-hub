@@ -15,6 +15,13 @@ img {
   height: auto;
   display: block;
 }
+/* ===== HEADER BRAND SIZE – DJAMEL ONLY ===== */
+.site-header .logo a,
+.site-header .logo span {
+  font-size: 1.15rem;      /* bigger brand name */
+  letter-spacing: 0.16em;  /* keeps the spaced-out look */
+  font-weight: 700;
+}
 
 /* ----------- HERO SECTION ----------- */
 
