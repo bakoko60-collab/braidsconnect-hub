@@ -247,7 +247,6 @@ body {
     border-radius: 1.4rem;
   }
 }
-
 @media (max-width: 600px) {
   .px-hero {
     padding: 0 1.2rem 2.5rem;
@@ -268,21 +267,18 @@ body {
     margin-bottom: 2.1rem;
   }
 
-  /* HERO BUTTONS – MOBILE */
+  /* <<< make buttons stack on mobile */
   .px-hero-buttons {
-    flex-direction: column;     /* stack */
-    align-items: center;        /* center them */
-    gap: 0.75rem;               /* slightly smaller gap */
+    flex-direction: column;
+    align-items: center;
   }
 
   .px-btn {
-    width: auto;                /* not full width */
-    min-width: 160px;           /* smaller pill */
-    max-width: 210px;
-    padding: 0.6rem 1.6rem;     /* less tall & less wide */
-    font-size: 0.95rem;         /* smaller text */
+    width: 100%;
+    max-width: 260px;
   }
 }
+
 
 
 /* ================== HEADER (PRINTEXPRESS) ================== */
