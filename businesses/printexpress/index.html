@@ -23,13 +23,14 @@
 
     <!-- RIGHT: navigation -->
     <nav class="main-nav">
-      <ul>
-        <li><a href="index.html#top">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="../../index.html#home">Back to hub</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="#top">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="../../index.html#home">Back to hub</a></li>
+  </ul>
+</nav>
+
   </div>
 </header>
 
@@ -41,7 +42,7 @@
     <p class="px-hero-tagline">Your one-stop solution for everything print</p>
 
     <div class="px-hero-buttons">
-      <a href="index.html#services" class="px-btn px-btn-primary">View services</a>
+      <a href="#services" class="px-btn px-btn-primary">View services</a>
       <a href="contact.html" class="px-btn px-btn-secondary">Contact us</a>
       <a href="../../index.html#members" class="px-btn px-btn-secondary">BraidConnect Hub</a>
     </div>
@@ -54,7 +55,7 @@
     <p class="px-section-kicker">DESIGNS · BRANDS · PRINTS · SIGNS</p>
     <h2 class="px-section-title">Our Services</h2>
     <p class="px-section-subtitle">
-      From first idea to finished print and signage.
+      From first idea to finished print and signage. 
     </p>
 
     <!-- DESIGNS -->
@@ -139,10 +140,12 @@
     var target = document.getElementById('services');
     if (!target) return;
 
+    // All links that point to "#services" in any form
     var links = document.querySelectorAll('a[href$="#services"]');
     links.forEach(function (link) {
       link.addEventListener('click', function (event) {
         event.preventDefault();
+
         if (typeof target.scrollIntoView === 'function') {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
