@@ -193,3 +193,44 @@ img {
     font-size: 0.95rem;             /* tiny bit smaller text */
   }
 }
+/* HAWA – mobile hero crop */
+@media (max-width: 768px) {
+  .hawa-hero {               /* <- use your actual hero class */
+    background-position: 50% 30%;  /* 30% = slightly higher; show more lower area */
+  }
+}
+@media (max-width: 768px) {
+  .hawa-hero {
+    min-height: 80vh;   /* instead of 100vh / very tall */
+  }
+}
+/* =========================================
+   HAWA – MOBILE HERO TWEAKS
+   ========================================= */
+@media (max-width: 768px) {
+  /* Push hero content lower in the frame */
+  .hero.hero-hawa {
+    align-items: flex-end;      /* moves the text/buttons toward the bottom */
+    min-height: 85vh;           /* keeps it tall enough to show more of Hawa */
+  }
+
+  .hero.hero-hawa .hero-inner {
+    padding: 3.5rem 0 3.5rem;   /* top, right/left (0 is handled by .container), bottom */
+  }
+
+  /* Slightly smaller text so everything breathes */
+  .hero.hero-hawa .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero.hero-hawa .hero-tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Make the buttons a bit more compact on mobile */
+  .hero.hero-hawa .btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
