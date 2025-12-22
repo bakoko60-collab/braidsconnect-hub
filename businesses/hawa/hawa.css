@@ -164,3 +164,32 @@ img {
   flex-wrap: wrap;
   justify-content: center;
 }
+/* =========================================
+   MOBILE – HAWA HERO LAYOUT
+   ========================================= */
+@media (max-width: 768px) {
+  /* Push hero content lower on the image */
+  .hawa-hero {
+    min-height: 100vh;              /* full phone height */
+    display: flex;
+    align-items: flex-end;          /* pull content to bottom area */
+    padding: 3.5rem 1.5rem 2.8rem;  /* extra bottom padding */
+  }
+
+  .hawa-hero-inner {
+    margin-top: auto;               /* forces it to sit on the lower tier */
+  }
+
+  /* Buttons: slightly smaller & tidy */
+  .hawa-hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;        /* left aligned under the text */
+    gap: 0.7rem;
+  }
+
+  .hawa-hero-buttons .btn {
+    width: 230px;                   /* narrower than desktop */
+    padding: 0.75rem 1.8rem;
+    font-size: 0.95rem;             /* tiny bit smaller text */
+  }
+}
