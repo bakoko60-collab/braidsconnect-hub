@@ -614,6 +614,19 @@ a {
     padding-right: 1rem;
   }
 
+  /* HERO: push text + buttons lower on the image */
+  .hero {
+    align-items: flex-end;              /* move content toward bottom */
+  }
+
+  .hero-inner {
+    padding: 3.5rem 0 3.25rem;          /* adjust vertical spacing */
+  }
+
+  .hero-text {
+    margin-bottom: 0.5rem;
+  }
+
   /* Hero buttons: centered & a bit wider, but not full width */
   .hero-actions {
     align-items: center;
@@ -621,6 +634,7 @@ a {
 
   .hero-main-btn {
     width: 100%;
-    max-width: 230px;   /* <<< mobile width cap */
+    max-width: 230px;
   }
 }
+
