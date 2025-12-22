@@ -1,5 +1,5 @@
 /* =========================================
-   BRAIDCONNECT HUB – CLEAN BASE STYLES
+   BRAIDCONNECT – BASE STYLES
    ========================================= */
 
 /* ----- Reset ----- */
@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-x: hidden; /* stops left–right scrolling */
+  overflow-x: hidden;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
   line-height: 1.5;
 }
 
-/* Make images behave nicely in cards & sections */
+/* Images */
 img {
   max-width: 100%;
   display: block;
@@ -61,7 +61,7 @@ a {
   border-radius: 999px;
 }
 
-/* ----- Layout helpers ----- */
+/* Layout helper */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -86,6 +86,7 @@ a {
   align-items: center;
   justify-content: space-between;
   height: 70px;
+  padding: 0 1.5rem;
 }
 
 .logo a {
@@ -145,7 +146,7 @@ a {
     ),
     url("images/02.jpg");
   background-size: cover;
-  background-position: 50% 38%; /* frames the face */
+  background-position: 50% 38%;
 }
 
 .hero-inner {
@@ -157,7 +158,6 @@ a {
   max-width: 480px;
 }
 
-/* Hero heading + tagline */
 .hero-text h1 {
   font-size: 3rem;
   line-height: 1.1;
@@ -170,29 +170,16 @@ a {
   opacity: 0.95;
 }
 
-/* Hero buttons wrapper */
-.hero-actions {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;  /* stacked under text */
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-/* =========================================
-   BUTTONS (GLOBAL)
-   ========================================= */
-
-/* Slightly smaller pill buttons overall */
+/* Buttons – global style */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.9rem;   /* was 0.9 / 2.4 */
+  padding: 0.8rem 1.8rem;        /* slightly smaller */
   border-radius: 999px;
   border: none;
   font-weight: 600;
-  font-size: 0.9rem;        /* was 0.98 */
+  font-size: 0.98rem;
   cursor: pointer;
   transition:
     background-color 0.16s ease-out,
@@ -200,7 +187,27 @@ a {
     box-shadow 0.16s ease-out;
 }
 
-/* Primary purple */
+/* Hero button layout */
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/* Narrower hero pills */
+.hero-main-btn {
+  min-width: 190px;
+  max-width: 220px;              /* <<< desktop width cap */
+  width: auto;
+  justify-content: center;
+}
+
+.hero-members-btn {
+  font-size: 0.9rem;
+}
+
 .primary-btn {
   background: #a855f7;
   color: #ffffff;
@@ -213,7 +220,6 @@ a {
   box-shadow: 0 18px 36px rgba(124, 58, 237, 0.55);
 }
 
-/* Outline style */
 .secondary-btn {
   background: transparent;
   border: 1px solid #a855f7;
@@ -222,17 +228,6 @@ a {
 
 .secondary-btn:hover {
   background: rgba(168, 85, 247, 0.06);
-}
-
-/* Hero-specific buttons: same width, a bit narrower */
-.hero-main-btn {
-  width: 220px;             /* was 260 */
-  justify-content: center;
-}
-
-/* "Our members" button text slightly smaller */
-.hero-members-btn {
-  font-size: 0.85rem;
 }
 
 /* =========================================
@@ -297,14 +292,12 @@ a {
   color: #6b7280;
 }
 
-/* 3 cards */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
-/* single card */
 .service-card {
   background: #ffffff;
   border-radius: 20px;
@@ -314,15 +307,13 @@ a {
   flex-direction: column;
 }
 
-/* image inside card – keep full photo, no cropping */
 .service-image {
   width: 100%;
-  height: 210px;       /* keep cards same height */
-  object-fit: contain; /* show full image, no cropped heads */
-  background: #ffffff; /* white “frame” where there’s extra space */
+  height: 210px;
+  object-fit: contain;
+  background: #ffffff;
 }
 
-/* card text */
 .service-card h3 {
   font-size: 1.1rem;
   margin: 1.25rem 1.5rem 0.35rem;
@@ -333,14 +324,13 @@ a {
   color: #4b5563;
 }
 
-/* services CTA button */
 .services-cta {
   margin-top: 2.75rem;
   text-align: center;
 }
 
 /* =========================================
-   BRAIDCONNECT MEMBERS (HUB DIRECTORY)
+   MEMBERS SECTION (HUB DIRECTORY)
    ========================================= */
 
 .members {
@@ -348,14 +338,12 @@ a {
   background: #f9fafb;
 }
 
-/* 3 cards per row on desktop, wraps for more members */
 .members-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
-/* single card */
 .member-card {
   background: #ffffff;
   border-radius: 18px;
@@ -365,14 +353,12 @@ a {
   flex-direction: column;
 }
 
-/* image in card – slightly smaller than services cards */
 .member-image {
   width: 100%;
-  height: 180px;      /* smaller height */
+  height: 180px;
   object-fit: cover;
 }
 
-/* text area */
 .member-body {
   padding: 1.25rem 1.5rem 1.5rem;
   display: flex;
@@ -389,15 +375,14 @@ a {
   font-size: 0.9rem;
 }
 
-/* button inside member cards: a bit smaller */
+/* smaller button inside member cards */
 .member-btn {
   margin-top: 0.25rem;
   justify-content: center;
-  padding: 0.45rem 0.9rem;  /* smaller height + width */
-  font-size: 0.85rem;       /* smaller text */
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
 }
 
-/* Titi card – live page, keep centered */
 .member-card.titi-centered {
   text-align: center;
 }
@@ -407,7 +392,7 @@ a {
   justify-content: center;
 }
 
-/* “coming soon” style (no site yet) */
+/* coming soon style */
 .member-card.coming-soon {
   opacity: 0.85;
   text-align: center;
@@ -448,7 +433,6 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* form elements */
 .contact-form .form-group {
   margin-bottom: 1.25rem;
 }
@@ -483,7 +467,6 @@ a {
   margin-top: 0.2rem;
 }
 
-/* contact info side */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -509,7 +492,6 @@ a {
   text-decoration: underline;
 }
 
-/* hours list */
 .contact-block.hours ul {
   list-style: none;
 }
@@ -543,7 +525,7 @@ a {
   color: #9ca3af;
 }
 
-/* Footer home button (on contact) */
+/* Footer “Home” button */
 .footer-home-link {
   margin-top: 1.5rem;
   text-align: center;
@@ -554,7 +536,6 @@ a {
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
   border: 1px solid #ffffff;
-  text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -565,7 +546,6 @@ a {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Contact form actions (submit + home inline on hub contact) */
 .form-actions {
   margin-top: 1.5rem;
   display: flex;
@@ -574,12 +554,8 @@ a {
   justify-content: center;
 }
 
-.home-inline-btn {
-  text-align: center;
-}
-
 /* =========================================
-   RESPONSIVE – TABLET & DOWN
+   RESPONSIVE
    ========================================= */
 
 @media (max-width: 900px) {
@@ -589,7 +565,7 @@ a {
   }
 
   .services-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
@@ -602,12 +578,8 @@ a {
   }
 }
 
-/* =========================================
-   MOBILE TWEAKS – HUB ONLY
-   ========================================= */
-
 @media (max-width: 768px) {
-  /* Header: stack logo + menu nicely */
+  /* Header stack */
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -618,40 +590,37 @@ a {
 
   .logo a {
     font-size: 1rem;
-    margin-bottom: 0.35rem;
   }
 
   .main-nav ul {
     width: 100%;
     justify-content: space-between;
     gap: 0.75rem;
-    flex-wrap: wrap;
   }
 
   .main-nav a {
     font-size: 0.9rem;
   }
 
-  /* Cards: 1 per row on small screens */
+  /* 1 card per row */
   .services-grid,
   .members-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Give cards a little breathing room from the edges */
   .services,
   .members {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  /* Hero buttons: full-width but capped */
+  /* Hero buttons: centered & a bit wider, but not full width */
   .hero-actions {
-    align-items: stretch;
+    align-items: center;
   }
 
   .hero-main-btn {
     width: 100%;
-    max-width: 220px;
+    max-width: 230px;   /* <<< mobile width cap */
   }
 }
