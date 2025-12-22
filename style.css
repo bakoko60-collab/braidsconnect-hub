@@ -553,36 +553,22 @@ a {
    RESPONSIVE
    ========================================= */
 
+/* Tablet and small laptop adjustments */
 @media (max-width: 900px) {
+  /* About + contact go to 1 column */
   .about-inner,
-  .services-grid,
   .contact-inner {
     grid-template-columns: minmax(0, 1fr);
   }
-/* --- Extra mobile header tweaks for the Hub --- */
-@media (max-width: 768px) {
-  .site-header {
-    height: auto;
-  }
 
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.75rem 1.5rem 0.9rem;
-    gap: 0.35rem;
-  }
-
-  .main-nav ul {
-    margin-top: 0.1rem;
-    gap: 0.9rem;
-    flex-wrap: wrap;
-  }
-}
-
-  .services-grid {
+  /* Services + members: 2 cards per row */
+  .services-grid,
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
+  /* Slightly reframe the hero image + title size */
   .hero {
     background-position: 50% 45%;
   }
@@ -591,13 +577,16 @@ a {
     font-size: 2.4rem;
   }
 
+  /* If you use a .members-buttons wrapper, stack it */
   .members-buttons {
     flex-direction: column;
     align-items: center;
   }
 }
-/* --- Extra mobile header tweaks for the Hub --- */
+
+/* Phones and small tablets */
 @media (max-width: 768px) {
+  /* ----- HEADER: stack logo + menu nicely ----- */
   .site-header {
     height: auto;
   }
@@ -609,12 +598,73 @@ a {
     gap: 0.35rem;
   }
 
+  .logo a {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
   .main-nav ul {
+    width: 100%;
     margin-top: 0.1rem;
     gap: 0.9rem;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  /* ----- HERO: keep it readable on phones ----- */
+  .hero {
+    min-height: 80vh;
+    align-items: center;
+    background-position: 50% 45%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .hero-main-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* ----- GRIDS: 1 card per row on phones ----- */
+  .services-grid,
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slight padding so cards don’t touch the edges */
+  .services,
+  .members {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Extra safety: ensure these are single column too */
+  .about-inner,
+  .contact-inner {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
+
 
 /* ---------- FOOTER HOME BUTTON ---------- */
 .footer-home-link {
