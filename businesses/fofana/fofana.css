@@ -369,16 +369,17 @@ body {
 
 @media (max-width: 600px) {
   .px-hero {
-    padding: 0 1.2rem 2.5rem;
+    padding: 1.5rem 1.2rem 2.8rem;
   }
 
   .px-hero-title-main {
-    font-size: 2.2rem;
-    letter-spacing: 0.03em;
+    font-size: 2.3rem;
+    letter-spacing: 0.055em;
+    white-space: normal;   /* allow “FOFANA EXPRESS” to wrap */
   }
 
   .px-hero-title-sub {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .px-hero-tagline {
@@ -398,6 +399,7 @@ body {
     max-width: 260px;
   }
 }
+
 /* Force hub-style buttons on Fofana to use the same blue look */
 .btn,
 .btn.primary-btn,
