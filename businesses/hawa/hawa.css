@@ -234,3 +234,24 @@ img {
     font-size: 0.9rem;
   }
 }
+/* ===== BUTTON POLISH – HUB (APPLIES TO HAWA TOO) ===== */
+
+/* Base size a bit slimmer */
+.btn {
+  padding: 0.75rem 2rem;      /* was ~0.9rem 2.4rem style */
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* Hero buttons: same width, not too wide */
+.hero-actions .btn {
+  width: 100%;
+  max-width: 240px;
+}
+
+/* On very small screens, give a tiny bit more width */
+@media (max-width: 600px) {
+  .hero-actions .btn {
+    max-width: 260px;
+  }
+}
