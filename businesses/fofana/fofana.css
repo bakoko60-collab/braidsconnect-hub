@@ -563,4 +563,26 @@ body {
     font-size: 0.95rem;
   }
 }
+/* ===== BUTTON POLISH – FOFANA ===== */
+
+/* Slimmer base buttons */
+.px-btn {
+  min-width: 180px;           /* was 190 */
+  padding: 0.75rem 2.1rem;    /* slightly less tall + narrow */
+  font-size: 0.95rem;
+}
+
+/* Hero buttons full-width but not huge on phones */
+@media (max-width: 600px) {
+  .px-btn {
+    width: 100%;
+    max-width: 20px;
+    padding: 0.8rem 1.8rem;
+  }
+}
+/* FOFANA – gently slimmer hero buttons */
+.px-hero-buttons .px-btn {
+  min-width: 170px;       /* was 190px in the base style */
+  padding: 0.8rem 2.2rem; /* was 0.9rem 2.8rem */
+}
 
