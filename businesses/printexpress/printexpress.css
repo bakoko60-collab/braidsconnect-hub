@@ -287,9 +287,16 @@ body {
 
 /* ================== HEADER (PRINTEXPRESS) ================== */
 .site-header {
+  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  /* make the header stay visible while scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
+
 
 .header-inner {
   max-width: 1200px;
