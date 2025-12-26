@@ -393,8 +393,14 @@ a {
 .member-btn {
   margin-top: 0.25rem;
   justify-content: center;
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 1.2rem;
   font-size: 0.85rem;
+
+  /* NEW: make all member buttons same width + centered */
+  width: 9rem;              /* ~144px, similar to Fatima’s size */
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Titi card – centered */
