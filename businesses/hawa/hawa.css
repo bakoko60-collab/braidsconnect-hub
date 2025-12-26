@@ -2,6 +2,11 @@
    HAWA HAIR & BEAUTY – PAGE OVERRIDES
    (Keeps hub styles intact, only tweaks Hawa)
    ========================================= */
+/* Shared font for all BraidConnect sites */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 html,
 body {
   margin: 0;
