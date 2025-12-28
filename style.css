@@ -702,3 +702,39 @@ section.members {
     background-color: #f8f9fc;
   }
 }
+/* ============================
+   HUB ABOUT – mobile layout
+   ============================ */
+@media (max-width: 768px) {
+  /* Give the section a bit less vertical padding on small screens */
+  .about {
+    padding: 3.5rem 0 3.5rem;
+  }
+
+  /* Stack text and image instead of 2 columns */
+  .about-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    align-items: flex-start;
+  }
+
+  /* Make sure text comes first */
+  .about-text {
+    order: 1;
+  }
+
+  /* Image gets full card width and is centered */
+  .about-image {
+    order: 2;
+    width: 100%;
+    max-width: 420px;    /* you can bump to 460px if you want it bigger */
+    margin: 0 auto 0;    /* center in the card */
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
