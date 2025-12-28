@@ -433,82 +433,114 @@ a {
   transform: none;
 }
 
-/* =========================================
-   CONTACT SECTION
-   ========================================= */
+/* ================= CONTACT SECTION – REFINED ================= */
 
 .contact {
-  padding: 5rem 0 4.5rem;
-  background: #ffffff;
+  padding: 4rem 1.5rem 4.5rem;
+  background: #f7f7fb;            /* very light grey/lavender */
 }
 
 .contact-inner {
+  max-width: 1040px;              /* a bit narrower = more breathing room */
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
   align-items: flex-start;
+}
+
+/* FORM CARD -------------------------------------------------- */
+.contact-form-wrapper {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.10);
 }
 
 .contact-form-wrapper h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* form elements */
-.contact-form .form-group {
+  font-size: 1.6rem;
   margin-bottom: 1.25rem;
 }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 0.35rem;
-  font-weight: 500;
-}
-
-.contact-form input,
-.contact-form textarea {
+.contact-form {
   width: 100%;
-  padding: 0.7rem 0.8rem;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: #111827;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
   font: inherit;
+  line-height: 1.4;
 }
 
-.contact-form textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
+/* checkbox row */
 .checkbox-group {
   display: flex;
+  gap: 0.6rem;
   align-items: flex-start;
-  gap: 0.5rem;
+  margin-top: 0.6rem;
 }
 
 .checkbox-group input[type="checkbox"] {
   margin-top: 0.2rem;
 }
 
-/* contact info side */
-.contact-info {
+.checkbox-group label {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+/* submit + home buttons */
+.form-actions {
+  margin-top: 1.4rem;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* INFO COLUMN ------------------------------------------------ */
+.contact-info {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+}
+
+.contact-block + .contact-block {
+  margin-top: 1.3rem;
 }
 
 .contact-block h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-block p,
-.contact-block li,
-.contact-block a {
-  color: #374151;
+.contact-block li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4b5563;
 }
 
 .contact-block a {
-  color: #8b5cf6;
+  color: #2563eb;
+  text-decoration: none;
 }
 
 .contact-block a:hover {
@@ -525,66 +557,33 @@ a {
 .contact-block.hours li {
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 0;
-  border-bottom: 1px dashed #e5e7eb;
-}
-
-/* =========================================
-   FOOTER
-   ========================================= */
-
-.site-footer {
-  background: #111827;
-  color: #e5e7eb;
-  padding: 1.75rem 0;
-}
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.footer-inner p {
-  font-size: 0.85rem;
-  color: #9ca3af;
-}
-
-/* ---------- Extra buttons in forms / footer ---------- */
-
-.form-actions {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
 }
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-/* Medium screens */
+/* RESPONSIVE: stack nicely on mobile ------------------------ */
 @media (max-width: 900px) {
-  .about-inner,
   .contact-inner {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .services-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-  }
-
-  .members-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hero-text h1 {
-    font-size: 2.4rem;
+  .contact-info {
+    padding-top: 1.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 3rem 1.1rem 3.5rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-info {
+    padding: 1.6rem 1.5rem;
+    border-radius: 1.25rem;
+  }
+}
+
 
 /* Small screens / mobile */
 @media (max-width: 768px) {
@@ -653,5 +652,53 @@ a {
   .members {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+/* =========================================
+   BRAIDCONNECT HUB – LIGHT POLISH
+   (backgrounds + card shadows only)
+   ========================================= */
+
+/* Overall page background – soft vertical tint */
+body {
+  background: linear-gradient(to bottom, #f5f5fb 0%, #f2f4f8 40%, #eef2f7 100%);
+}
+
+/* Generic section background on the hub */
+section.about,
+section.services,
+section.contact,
+section.members {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Give all main "card" shells the same depth */
+.member-card,
+.contact-form-wrapper,
+.contact-info,
+.about-inner,
+.services-grid .service-card {
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+/* Make sure inner content doesn’t touch the card edges */
+.member-card,
+.services-grid .service-card {
+  padding-bottom: 1.5rem;
+}
+
+/* Slightly soften section titles */
+.section-header h2 {
+  letter-spacing: 0.06em;
+}
+
+/* Reduce pure white blocks on mobile so they stand out from background */
+@media (max-width: 768px) {
+  section.about,
+  section.services,
+  section.contact,
+  section.members {
+    background-color: #f8f9fc;
   }
 }
