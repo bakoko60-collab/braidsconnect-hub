@@ -349,74 +349,95 @@ a {
 
 .members {
   padding: 5rem 0 4.5rem;
-  background: #f9fafb;
+  background: #eef2f8;              /* softer, less bright backdrop */
 }
 
+/* 3-up grid on desktop */
 .members-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
+/* Card shell */
 .member-card {
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 14px 30px rgba(148, 163, 184, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(148, 163, 184, 0.35);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
+/* Top photo */
 .member-image {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
 }
 
+/* Standard text+button block (Hawa, Fofana, PrintExpress) */
 .member-body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1.4rem 1.6rem 1.7rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+
+  /* CENTER EVERYTHING */
+  align-items: center;
+  text-align: center;
 }
 
-.member-body h3 {
-  font-size: 1rem;
+/* Name */
+.member-body h3,
+.member-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
-.member-body p {
+/* Description / tagline */
+.member-body p,
+.member-card-tagline {
   color: #4b5563;
   font-size: 0.9rem;
 }
 
-/* small button inside card */
-.member-btn {
-  margin-top: 0.25rem;
-  justify-content: center;
-  padding: 0.45rem 1.2rem;
-  font-size: 0.85rem;
-
-  /* NEW: make all member buttons same width + centered */
-  width: 9rem;              /* ~144px, similar to Fatima’s size */
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Titi card – centered */
-.member-card.titi-centered {
+/* Header block for Titi/Fatima cards */
+.member-card-header {
+  padding: 1.4rem 1.6rem 0.8rem;
   text-align: center;
 }
 
-.member-card.titi-centered .member-card-actions {
+.member-card-kicker {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  margin-bottom: 0.35rem;
+}
+
+/* Button inside each member card */
+.member-btn {
+  margin-top: 0.4rem;
+  justify-content: center;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.9rem;
+
+  /* same width for all (Hawa, Fofana, Titi, Fatima, PrintExpress) */
+  width: 9.2rem;
+  max-width: 100%;
+}
+
+/* For cards that use a separate actions block (Titi, Fatima) */
+.member-card-actions {
+  padding: 0 0 1.6rem;
   display: flex;
   justify-content: center;
 }
 
-/* “coming soon” */
+/* “coming soon” style if you ever want to grey out a member */
 .member-card.coming-soon {
-  opacity: 0.85;
-  text-align: center;
+  opacity: 0.9;
 }
 
 .member-card.coming-soon .member-btn {
@@ -424,14 +445,13 @@ a {
   color: #6b7280;
   box-shadow: none;
   cursor: default;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .member-card.coming-soon .member-btn:hover {
   background: #e5e7eb;
   transform: none;
 }
+
 
 /* ================= CONTACT SECTION – REFINED ================= */
 
@@ -736,5 +756,23 @@ section.members {
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+/* Force About CTA to stay purple (hub) */
+.about .btn.primary-btn {
+  background: #a855f7;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 14px 30px rgba(168, 85, 247, 0.55);
+}
+
+.about .btn.primary-btn:hover {
+  background: #7c3aed;
+  box-shadow: 0 18px 36px rgba(124, 58, 237, 0.55);
+}
+/* Darker members background on mobile only */
+@media (max-width: 768px) {
+  .members {
+    background-color: #d6dbea;  /* a bit darker than desktop */
   }
 }

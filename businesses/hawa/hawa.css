@@ -296,3 +296,17 @@ img {
     display: block;
   }
 }
+/* HAWA – make style cards slightly narrower on mobile */
+@media (max-width: 768px) {
+  /* keep the section padding light, but give the cards their own width */
+  .hawa-signature-card {
+    max-width: 92%;          /* narrower than container */
+    margin: 0  auto 1.75rem; /* center card + keep gap between cards */
+  }
+
+  /* optional: tiny extra breathing room at sides of the whole section */
+  .hawa-signature-inner {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
