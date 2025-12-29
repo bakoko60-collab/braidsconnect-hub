@@ -310,3 +310,7 @@ img {
     padding-right: 0.25rem;
   }
 }
+/* Temporarily hide Hawa footer */
+.site-footer {
+  display: none;
+}
