@@ -543,41 +543,50 @@ h3,
   }
 
   .hero-inner {
-    padding: 2.5rem 0;
+    padding: 2.2rem 0;
   }
 
   .hero-text {
-    max-width: 88%;
+    max-width: 84%;
   }
 
   .hero-kicker {
-    margin-bottom: 0.65rem;
-    font-size: 0.68rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.64rem;
     letter-spacing: 0.18em;
   }
 
   .hero-text h1 {
-    max-width: 13em;
-    margin-bottom: 0.95rem;
-    font-size: clamp(1.8rem, 7vw, 2.2rem);
-    line-height: 1.08;
+    max-width: 12.5em;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1.65rem, 6vw, 1.95rem);
+    line-height: 1.1;
   }
 
   .hero-tagline {
-    max-width: 34rem;
-    margin-bottom: 1.2rem;
-    font-size: 0.94rem;
-    line-height: 1.5;
+    max-width: 30rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.7rem;
+    gap: 0.55rem;
+  }
+
+  .btn {
+    width: auto;
+    min-height: 40px;
+    padding: 0.58rem 1.15rem;
+    font-size: 0.84rem;
   }
 
   .hero-main-btn {
-    width: min(100%, 250px);
+    width: auto;
+    min-width: 160px;
+    max-width: 210px;
   }
 
   .about-strip-inner {
@@ -615,6 +624,39 @@ h3,
     height: 205px;
   }
 
+  .member-body {
+    min-height: auto;
+    padding: 1.15rem 1.1rem 1.25rem;
+  }
+
+  .member-body h3,
+  .member-card-title {
+    margin-bottom: 0.3rem;
+  }
+
+  .member-body p,
+  .member-card-tagline {
+    margin-bottom: 0.8rem;
+  }
+
+  .member-btn {
+    width: auto;
+    min-width: 8.8rem;
+    min-height: 38px;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .services-cta {
+    margin-top: 2rem;
+  }
+
+  .services-cta .btn {
+    width: auto;
+    min-width: 150px;
+    max-width: 200px;
+  }
+
   .contact-direct-inner {
     padding: 2rem 1.2rem;
   }
@@ -634,7 +676,9 @@ h3,
   }
 
   .contact-direct-links .btn {
-    width: min(100%, 280px);
+    width: auto;
+    min-width: 200px;
+    max-width: 220px;
   }
 }
 
@@ -650,32 +694,33 @@ h3,
   .hero {
     min-height: 70vh;
     min-height: 70svh;
-    background-position: 70% center;
+    background-position: 73% center;
   }
 
   .hero-text {
-    max-width: 92%;
+    max-width: 86%;
   }
 
   .hero-text h1 {
-    max-width: 13em;
-    font-size: clamp(1.7rem, 7.5vw, 2rem);
+    max-width: 12.5em;
+    font-size: clamp(1.6rem, 6.5vw, 1.85rem);
     line-height: 1.1;
   }
 
   .hero-tagline {
     max-width: 100%;
-    font-size: 0.9rem;
+    font-size: 0.86rem;
   }
 
   .btn {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
+    max-width: 220px;
   }
 
   .hero-main-btn {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
+    min-width: 155px;
+    max-width: 200px;
   }
 
   .member-body {
