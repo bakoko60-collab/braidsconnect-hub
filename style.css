@@ -765,6 +765,8 @@ h3 {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   color: var(--ivory);
   background:
     radial-gradient(circle at 15% 12%, rgba(215, 168, 75, 0.2), transparent 28%),
@@ -862,16 +864,36 @@ h3 {
 }
 
 .hero-visual {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 250, 241, 0.18);
   border-radius: 30px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8% 1% 7% 28%;
+  z-index: 0;
+  display: none;
+  border-radius: 45% 55% 50% 48%;
+  background:
+    radial-gradient(circle at 58% 44%, rgba(240, 197, 106, 0.12), transparent 50%),
+    radial-gradient(circle at 62% 58%, rgba(255, 250, 241, 0.06), transparent 56%);
+  filter: blur(30px);
+  opacity: 0.58;
+}
+
 .hero-visual picture,
 .hero-visual img {
   display: block;
   width: 100%;
+}
+
+.hero-visual picture {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-visual img {
@@ -1249,16 +1271,112 @@ h3 {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+    position: relative;
+    isolation: isolate;
+    grid-template-columns: minmax(0, 540px) minmax(0, 1fr);
     align-items: center;
-    min-height: 680px;
+    min-height: 720px;
     padding-block: 54px;
   }
 
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 535px;
+  }
+
+  .hero h1 {
+    max-width: 535px;
+    font-size: clamp(4.1rem, 5.7vw, 4.65rem);
+  }
+
+  .hero-support {
+    max-width: 520px;
+    margin-bottom: 18px;
+  }
+
+  .hero-visual {
+    position: absolute;
+    inset: 0 calc(50% - 50vw) 0 0;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  .hero-visual picture {
+    position: absolute;
+    right: -38px;
+    bottom: 0;
+    z-index: 1;
+    width: 625px;
+    max-width: none;
+  }
+
+  .hero-visual::before {
+    display: none;
+    inset: 3% 0 0 43%;
+  }
+
   .hero-visual img {
-    height: min(620px, 58vw);
-    object-fit: cover;
-    object-position: center;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    filter:
+      drop-shadow(0 24px 34px rgba(0, 0, 0, 0.22))
+      drop-shadow(0 0 18px rgba(240, 197, 106, 0.13));
+  }
+
+  @media (max-width: 1079px) {
+    .hero-copy {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      max-width: 500px;
+      font-size: clamp(3rem, 6.4vw, 4.1rem);
+    }
+
+    .hero-visual picture {
+      right: -38px;
+      width: 625px;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .hero-grid {
+      min-height: 830px;
+    }
+
+    .hero-visual picture {
+      right: -44px;
+      width: 720px;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    .hero-grid {
+      min-height: 945px;
+    }
+
+    .hero-visual picture {
+      right: -52px;
+      width: 820px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .hero-grid {
+      min-height: 1125px;
+    }
+
+    .hero-visual picture {
+      right: -64px;
+      width: min(51vw, 980px);
+    }
   }
 
   .featured-websites,
