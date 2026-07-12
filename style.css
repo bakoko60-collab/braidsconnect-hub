@@ -1811,6 +1811,11 @@ html:has(body.home-visual) {
     scroll-padding-top: 64px;
   }
 
+  .home-visual .site-header {
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+  }
+
   .home-visual #home,
   .home-visual #work,
   .home-visual #services,
