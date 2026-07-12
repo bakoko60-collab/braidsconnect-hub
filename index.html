@@ -7,7 +7,7 @@
   <title>BraidsConnect Hub | Websites for Salons, Restaurants, and Small Businesses</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-visual">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="BraidsConnect Hub home">
@@ -26,14 +26,17 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow eyebrow-gold">BraidsConnect Hub by PrintExpress Digital Studio</p>
-          <h1>Your Business Deserves a Website That Works.</h1>
-          <p class="hero-support">Clean, mobile-first websites for salons, restaurants, and small businesses. Ready in days, not months.</p>
-          <div class="button-row">
+          <p class="eyebrow eyebrow-gold">BraidsConnect Hub &middot; Website Creation &amp; Hosting</p>
+          <h1>
+            <span class="desktop-headline">Your Business Deserves a Better Website.</span>
+            <span class="mobile-headline">A Better Website for Your Business.</span>
+          </h1>
+          <p class="hero-support">We build websites for salons, restaurants, and small businesses&mdash;and keep them online.</p>
+          <div class="button-row hero-actions-desktop">
             <a class="button button-primary" href="#contact">Start Your Website</a>
             <a class="button button-ghost" href="#work">View Our Work</a>
           </div>
-          <p class="hero-phone">Call/Text: <a href="tel:15167389056">516 738 9056</a></p>
+          <p class="hero-phone hero-phone-desktop">Call/Text: <a href="tel:15167389056">516 738 9056</a></p>
         </div>
         <div class="hero-visual" aria-label="Featured salon website visual">
           <picture>
@@ -41,50 +44,53 @@
             <img src="images/hero-mobile.jpg" alt="Braided hairstyle presented in an elegant salon setting">
           </picture>
         </div>
+        <div class="mobile-hero-contact" aria-label="Mobile contact actions">
+          <a class="mobile-hero-number" href="tel:15167389056">516 738 9056</a>
+          <div class="button-row">
+            <a class="button button-primary" href="tel:15167389056">Call</a>
+            <a class="button button-ghost" href="sms:15167389056">Text</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="featured-websites" id="work">
+    <section class="see-work" id="work">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Featured Websites</p>
-          <h2>Built to Make Small Businesses Look Ready.</h2>
-          <p>Real websites built to help small businesses look professional and make it easier for customers to respond.</p>
+        <div class="section-heading visual-heading">
+          <p class="eyebrow">See Our Work</p>
+          <p class="swipe-cue">Swipe to see more</p>
         </div>
 
-        <div class="case-stack">
-          <article class="case-study">
-            <div class="case-image">
+        <div class="work-gallery" aria-label="Selected websites">
+          <article class="work-card">
+            <a class="work-media" href="https://nyuma-landing-page.pages.dev" target="_blank" rel="noopener">
               <img src="images/nyuma.jpg" alt="Nyuma Hair Braiding website and salon visual preview">
-            </div>
-            <div class="case-copy">
+            </a>
+            <div class="work-meta">
               <p class="project-type">Salon Website</p>
               <h3>Nyuma Hair Braiding</h3>
-              <p>A mobile-first promotional website designed to help clients view styles, find the salon, and text about appointments.</p>
               <a class="text-link" href="https://nyuma-landing-page.pages.dev" target="_blank" rel="noopener">View Site</a>
             </div>
           </article>
 
-          <article class="case-study case-study-reverse">
-            <div class="case-image">
+          <article class="work-card">
+            <a class="work-media" href="https://bakoko60-collab.github.io/611fofana-express/" target="_blank" rel="noopener">
               <img src="images/fofana-express.jpg" alt="Fofana Express Hair Braiding website visual preview">
-            </div>
-            <div class="case-copy">
+            </a>
+            <div class="work-meta">
               <p class="project-type">Salon Website</p>
               <h3>Fofana Express</h3>
-              <p>A multi-page salon website featuring services, hairstyle galleries, contact information, and booking actions.</p>
               <a class="text-link" href="https://bakoko60-collab.github.io/611fofana-express/" target="_blank" rel="noopener">View Site</a>
             </div>
           </article>
 
-          <article class="case-study">
-            <div class="case-image case-image-dark">
+          <article class="work-card">
+            <a class="work-media work-media-dark" href="https://teranga-kitchen.pages.dev" target="_blank" rel="noopener">
               <img src="images/teranga.jpg" alt="Teranga Kitchen restaurant website and food visual preview">
-            </div>
-            <div class="case-copy">
+            </a>
+            <div class="work-meta">
               <p class="project-type">Restaurant Website</p>
               <h3>Teranga Kitchen</h3>
-              <p>A restaurant promotion website built around food photography, menu visibility, and call-to-order actions.</p>
               <a class="text-link" href="https://teranga-kitchen.pages.dev" target="_blank" rel="noopener">View Site</a>
             </div>
           </article>
@@ -92,111 +98,54 @@
       </div>
     </section>
 
-    <section class="conversion-strip" aria-label="Quick contact">
-      <div class="container conversion-inner">
-        <p>Need something like this for your business?</p>
-        <div class="conversion-actions">
-          <span>Call or text <a href="tel:15167389056">516 738 9056</a></span>
-          <a class="mini-link" href="tel:15167389056">Call</a>
-          <a class="mini-link" href="sms:15167389056">Text</a>
-        </div>
-      </div>
-    </section>
-
     <section class="services-section" id="services">
       <div class="container">
-        <div class="section-heading section-heading-light">
+        <div class="section-heading section-heading-light visual-heading">
           <p class="eyebrow">What We Build</p>
-          <h2>Clear Digital Tools for the Businesses People Search For.</h2>
         </div>
-        <div class="service-blocks">
-          <article class="service-block">
-            <div class="service-image">
+        <div class="visual-services">
+          <a class="visual-service" href="https://nyuma-landing-page.pages.dev" target="_blank" rel="noopener" aria-label="View salon website example: Nyuma Hair Braiding">
+            <div class="visual-service-image">
               <img src="images/business-websites-1.jpg" alt="Small business website preview">
             </div>
             <div>
-              <h3>Salon &amp; Beauty Websites</h3>
-              <p>Mobile-first websites that showcase services, hairstyle work, offers, locations, and clear call or text actions.</p>
+              <h3>Salon Websites</h3>
+              <p>Show your styles. Get calls.</p>
             </div>
-          </article>
-          <article class="service-block">
-            <div class="service-image service-image-dark">
+          </a>
+          <a class="visual-service" href="https://teranga-kitchen.pages.dev" target="_blank" rel="noopener" aria-label="View restaurant website example: Teranga Kitchen">
+            <div class="visual-service-image visual-service-image-dark">
               <img src="images/teranga.jpg" alt="Restaurant food presentation for website promotion">
             </div>
             <div>
               <h3>Restaurant Websites</h3>
-              <p>Food-focused websites with menus, galleries, location details, and easy call-to-order actions.</p>
+              <p>Show your food. Make ordering easy.</p>
             </div>
-          </article>
-          <article class="service-block">
-            <div class="service-image">
+          </a>
+          <a class="visual-service" href="https://printexpressdigitalstudio.myportfolio.com" target="_blank" rel="noopener" aria-label="View PrintExpress promotional design portfolio">
+            <div class="visual-service-image">
               <img src="images/promo-pages.jpg" alt="Promotional flyers, cards, and small business design samples">
             </div>
             <div>
-              <h3>Promotional Design</h3>
-              <p>Flyers, social media promotions, business cards, menus, banners, signs, and related business visuals.</p>
+              <h3>Flyers &amp; Business Promotion</h3>
+              <p>Promote your offers and services.</p>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="audience-section">
-      <div class="container audience-grid">
-        <div class="audience-copy">
-          <p class="eyebrow">Who We Serve</p>
-          <h2>Made for Businesses That Need Customers to Respond.</h2>
-          <p>Built for businesses that need to look professional, show their work, and make it easier for customers to respond.</p>
-          <p class="transition-line">See your business here? Let's build something that fits it.</p>
-          <a class="button button-primary" href="#contact">Call or Text</a>
-        </div>
-        <div class="audience-panel">
-          <article>
-            <img src="images/fofana-express.jpg" alt="Hair braiding salon visual">
-            <h3>Hair Braiding Salons</h3>
-          </article>
-          <article>
-            <img src="images/business-visual-1.jpg" alt="Beauty business storefront sign visual">
-            <h3>Beauty Businesses</h3>
-          </article>
-          <article>
-            <img src="images/teranga.jpg" alt="Restaurant food visual">
-            <h3>Restaurants and Food Businesses</h3>
-          </article>
-          <article>
-            <img src="images/promo-pages.jpg" alt="Small business promotional design visual">
-            <h3>Local Small Businesses</h3>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio-section">
-      <div class="container portfolio-card">
-        <div class="portfolio-image">
-          <img src="images/print-express-1.jpg" alt="PrintExpress Digital Studio storefront branding work">
-        </div>
-        <div class="portfolio-copy">
-          <p class="eyebrow">Explore More Design Work</p>
-          <h2>PrintExpress Digital Studio</h2>
-          <p>View the full PrintExpress Digital Studio portfolio for photography, salon marketing, business cards, flyers, banners, signs, and small-business branding.</p>
-          <a class="button button-primary" href="https://printexpressdigitalstudio.myportfolio.com" target="_blank" rel="noopener">View PrintExpress Portfolio</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
+    <section class="contact-section desktop-contact" id="contact">
       <div class="container contact-inner">
         <div>
-          <p class="eyebrow eyebrow-gold">Main Contact</p>
           <h2>Let's Build Something for Your Business.</h2>
-          <p>Call or text to start. Most projects launch in under two weeks.</p>
+          <p>Call or text to start. We build your website and keep it online.</p>
           <a class="contact-number" href="tel:15167389056">516 738 9056</a>
         </div>
         <div class="button-row contact-actions">
           <a class="button button-light" href="tel:15167389056">Call</a>
           <a class="button button-outline-light" href="sms:15167389056">Text</a>
-          <a class="button button-outline-light" href="https://printexpressdigitalstudio.myportfolio.com" target="_blank" rel="noopener">View Portfolio</a>
+          <a class="button button-outline-light" href="https://printexpressdigitalstudio.myportfolio.com" target="_blank" rel="noopener">View PrintExpress Portfolio</a>
         </div>
       </div>
     </section>
@@ -205,15 +154,86 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <p class="footer-brand">BraidsConnect Hub</p>
-        <p>Powered by PrintExpress Digital Studio</p>
-      </div>
-      <div class="footer-links">
-        <a href="tel:15167389056">Call/Text: 516 738 9056</a>
-        <a href="#work">Work</a>
-        <a href="https://printexpressdigitalstudio.myportfolio.com" target="_blank" rel="noopener">Portfolio</a>
+        <p class="footer-brand">&copy; 2026 BraidsConnect Hub</p>
+        <p class="footer-hosting"><span>Website Creation &amp; Hosting</span><span class="footer-separator" aria-hidden="true">&middot;</span><span>Powered by <span class="footer-studio">PrintExpress Digital Studio</span></span></p>
       </div>
     </div>
   </footer>
+  <script>
+    (() => {
+      const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+      const navSections = navLinks
+        .map((link) => {
+          const section = document.querySelector(link.getAttribute('href'));
+          return section ? { link, section } : null;
+        })
+        .filter(Boolean);
+
+      const isVisibleSection = (section) =>
+        section.offsetHeight > 1 && getComputedStyle(section).display !== 'none';
+
+      const setActiveNav = (id) => {
+        navLinks.forEach((link) => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      };
+
+      let selectedId = null;
+
+      const updateActiveNav = () => {
+        const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
+        const marker = Math.max(headerHeight + 12, window.innerHeight * 0.32);
+        const visibleSections = navSections.filter(({ section }) => isVisibleSection(section));
+        const targetId = selectedId || location.hash.slice(1);
+        const targetSection = targetId ? document.getElementById(targetId) : null;
+
+        if (targetSection && isVisibleSection(targetSection)) {
+          const rect = targetSection.getBoundingClientRect();
+          if (rect.bottom > headerHeight && rect.top < window.innerHeight) {
+            setActiveNav(targetId);
+            return;
+          }
+        }
+
+        selectedId = null;
+        let activeId = visibleSections[0]?.section.id || 'home';
+
+        visibleSections.forEach(({ section }) => {
+          if (section.getBoundingClientRect().top <= marker) {
+            activeId = section.id;
+          }
+        });
+
+        setActiveNav(activeId);
+      };
+
+      let pending = false;
+      const requestNavUpdate = () => {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(() => {
+          pending = false;
+          updateActiveNav();
+        });
+      };
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          selectedId = link.getAttribute('href').slice(1);
+          setActiveNav(selectedId);
+          setTimeout(requestNavUpdate, 0);
+        });
+      });
+
+      updateActiveNav();
+      window.addEventListener('scroll', requestNavUpdate, { passive: true });
+      window.addEventListener('resize', requestNavUpdate);
+      window.addEventListener('hashchange', requestNavUpdate);
+    })();
+  </script>
 </body>
 </html>
