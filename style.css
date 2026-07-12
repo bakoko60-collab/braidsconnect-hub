@@ -1812,7 +1812,19 @@ html:has(body.home-visual) {
   }
 
   .home-visual .site-header {
+    isolation: isolate;
+    background: var(--green-deep);
     overflow: hidden;
+    border-radius: 0;
+  }
+
+  .home-visual .site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--paper);
     border-radius: 18px 18px 0 0;
   }
 
@@ -1828,6 +1840,8 @@ html:has(body.home-visual) {
   }
 
   .home-visual .header-inner {
+    position: relative;
+    z-index: 1;
     gap: 2px;
     padding-block: 4px;
   }
