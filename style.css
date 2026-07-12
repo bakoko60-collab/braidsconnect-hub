@@ -1807,6 +1807,10 @@ html:has(body.home-visual) {
 }
 
 @media (max-width: 759px) {
+  html:has(body.home-visual) {
+    scroll-padding-top: 64px;
+  }
+
   .home-visual #home,
   .home-visual #work,
   .home-visual #services,
@@ -1819,13 +1823,22 @@ html:has(body.home-visual) {
   }
 
   .home-visual .header-inner {
-    gap: 8px;
-    padding-block: 11px 10px;
+    gap: 2px;
+    padding-block: 4px;
+  }
+
+  .home-visual .brand {
+    line-height: 1.2;
   }
 
   .home-visual .site-nav {
     gap: 18px;
     font-size: 0.83rem;
+    line-height: 1.2;
+  }
+
+  .home-visual .site-nav a {
+    padding-block: 6px;
   }
 
   .home-visual .site-nav a[href="#contact"] {
