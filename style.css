@@ -1683,6 +1683,30 @@ html:has(body.home-visual) {
   color: var(--amber);
 }
 
+.nyuma-project-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nyuma-project-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--amber);
+  font-size: 0.92rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.nyuma-project-link + .nyuma-project-link::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin-inline: 14px;
+  background: rgba(231, 184, 93, 0.42);
+}
+
 .home-visual .services-section {
   padding-block: 52px;
 }
@@ -1977,6 +2001,16 @@ html:has(body.home-visual) {
 
   .home-visual .work-meta {
     padding: 10px 14px 13px;
+  }
+
+  .nyuma-project-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .nyuma-project-link + .nyuma-project-link::before {
+    display: none;
   }
 
   .home-visual .visual-services {
