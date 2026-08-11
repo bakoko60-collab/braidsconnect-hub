@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore braid styles including Boho Braids, Box Braids, Cornrows, Kids Braids, Knotless Braids, Marley Twists, and Men's Braids at BraidsConnect Hub.">
+  <meta name="robots" content="index, follow">
+
+  <title>Braid Styles | BraidsConnect Hub</title>
+
+  <link rel="canonical" href="https://braidsconnecthub.com/braid-styles/">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    html:has(body.braid-styles-page),
+    body.braid-styles-page {
+      overflow-x: visible;
+    }
+
+    body {
+      background: var(--paper);
+    }
+
+    .braid-styles-main {
+      padding-block: 48px 78px;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(215, 168, 75, 0.14), transparent 28%),
+        var(--paper);
+    }
+
+    .braid-styles-header {
+      margin-bottom: 32px;
+    }
+
+    .braid-styles-header h1 {
+      margin-bottom: 0;
+      color: var(--green);
+      font-size: clamp(2.45rem, 4.4vw, 3.25rem);
+    }
+
+    .braid-styles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 34px 24px;
+    }
+
+    .braid-style {
+      flex: 0 1 calc((100% - 72px) / 4);
+      min-width: 0;
+    }
+
+    .braid-style h2 {
+      margin-bottom: 10px;
+      color: var(--green);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+      letter-spacing: 0;
+      line-height: 1.18;
+    }
+
+    .braid-style img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    @media (max-width: 899px) {
+      .braid-styles-main {
+        padding-block: 38px 58px;
+      }
+
+      .braid-styles-header h1 {
+        font-size: clamp(2.2rem, 9vw, 2.75rem);
+      }
+
+      .braid-styles-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .braid-style {
+        width: 100%;
+      }
+
+      .braid-style h2 {
+        font-size: 1.18rem;
+      }
+    }
+  </style>
+</head>
+<body class="braid-styles-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="BraidsConnect Hub home">
+        <span>BraidsConnect</span> Hub
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../#home">Home</a>
+        <a href="../#work">Work</a>
+        <a href="../#services">Services</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="braid-styles-main">
+    <div class="container">
+      <div class="braid-styles-header">
+        <h1>Braid Styles</h1>
+      </div>
+
+      <div class="braid-styles-grid" aria-label="Braid styles">
+        <div class="braid-style">
+          <h2>Boho Braids</h2>
+          <img src="../images/braid-styles/boho-braids.png" alt="Boho braids hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Box Braids</h2>
+          <img src="../images/braid-styles/box-braids.jpg" alt="Box braids hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Cornrows</h2>
+          <img src="../images/braid-styles/cornrows.png" alt="Cornrows hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Kids Braids</h2>
+          <img src="../images/braid-styles/kids-braids.jpg" alt="Kids braids hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Knotless Braids</h2>
+          <img src="../images/braid-styles/knotless-braids.png" alt="Knotless braids hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Marley Twists</h2>
+          <img src="../images/braid-styles/marley-twists.png" alt="Marley twists hairstyle">
+        </div>
+        <div class="braid-style">
+          <h2>Men’s Braids</h2>
+          <img src="../images/braid-styles/mens-braids.jpg" alt="Men's braids hairstyle">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
