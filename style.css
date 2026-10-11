@@ -2016,8 +2016,8 @@ html:has(body.home-visual) {
   .nyuma-project-link {
     flex: 1 1 0;
     min-height: 45px;
-    justify-content: center;
-    padding: 6px 4px;
+    justify-content: flex-start;
+    padding: 6px 0;
     border: 0;
     border-radius: 0;
     background: transparent;
