@@ -2074,8 +2074,8 @@ html:has(body.home-visual) {
 
   .home-visual .visual-service h3 {
     font-size: 1.04rem;
-    white-space: nowrap;
-  }
+   white-space: normal;
+   }
 
   .home-visual .visual-service p {
     color: rgba(255, 250, 241, 0.86);
