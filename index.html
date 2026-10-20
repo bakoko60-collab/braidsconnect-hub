@@ -220,80 +220,332 @@
     </div>
   </footer>
   <script>
-    (() => {
-      const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
-      const navSections = navLinks
-        .map((link) => {
-          const section = document.querySelector(link.getAttribute('href'));
-          return section ? { link, section } : null;
-        })
-        .filter(Boolean);
+  (() => {
+    const header = document.querySelector('.site-header');
 
-      const isVisibleSection = (section) =>
-        section.offsetHeight > 1 && getComputedStyle(section).display !== 'none';
+    const navLinks = [
+      ...document.querySelectorAll('.site-nav a[href^="#"]')
+    ];
 
-      const setActiveNav = (id) => {
-        navLinks.forEach((link) => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.setAttribute('aria-current', 'page');
-          } else {
-            link.removeAttribute('aria-current');
-          }
-        });
-      };
+    const navSections = navLinks
+      .map((link) => {
+        const section = document.querySelector(
+          link.getAttribute('href')
+        );
 
-      let selectedId = null;
+        return section
+          ? { link, section }
+          : null;
+      })
+      .filter(Boolean);
 
-      const updateActiveNav = () => {
-        const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
-        const marker = Math.max(headerHeight + 12, window.innerHeight * 0.32);
-        const visibleSections = navSections.filter(({ section }) => isVisibleSection(section));
-        const targetId = selectedId || location.hash.slice(1);
-        const targetSection = targetId ? document.getElementById(targetId) : null;
+    const sectionIds = new Set(
+      navSections.map(({ section }) => section.id)
+    );
 
-        if (targetSection && isVisibleSection(targetSection)) {
-          const rect = targetSection.getBoundingClientRect();
-          if (rect.bottom > headerHeight && rect.top < window.innerHeight) {
-            setActiveNav(targetId);
-            return;
-          }
-        }
+    /*
+      Includes:
+      - BraidsConnect Hub logo
+      - Home
+      - Work
+      - Services
+      - Contact
+      - any CTA linking to those same sections
+    */
+    const sectionLinks = [
+      ...document.querySelectorAll('a[href^="#"]')
+    ].filter((link) => {
+      const id = link.getAttribute('href').slice(1);
+      return sectionIds.has(id);
+    });
 
-        selectedId = null;
-        let activeId = visibleSections[0]?.section.id || 'home';
+    const getHeaderHeight = () => {
+      return header
+        ? header.getBoundingClientRect().height
+        : 0;
+    };
 
-        visibleSections.forEach(({ section }) => {
-          if (section.getBoundingClientRect().top <= marker) {
-            activeId = section.id;
-          }
-        });
+    const isVisibleSection = (section) => {
+      return (
+        section.offsetHeight > 1 &&
+        getComputedStyle(section).display !== 'none'
+      );
+    };
 
-        setActiveNav(activeId);
-      };
-
-      let pending = false;
-      const requestNavUpdate = () => {
-        if (pending) return;
-        pending = true;
-        requestAnimationFrame(() => {
-          pending = false;
-          updateActiveNav();
-        });
-      };
-
+    const setActiveNav = (id) => {
       navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          selectedId = link.getAttribute('href').slice(1);
-          setActiveNav(selectedId);
-          setTimeout(requestNavUpdate, 0);
+        if (link.getAttribute('href') === `#${id}`) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    /*
+      HOME:
+      always goes to the true top of the document.
+
+      OTHER SECTIONS:
+      land immediately below the actual rendered sticky header.
+    */
+    const scrollToSection = (
+      id,
+      behavior = 'smooth'
+    ) => {
+      if (id === 'home') {
+        window.scrollTo({
+          top: 0,
+          behavior
         });
+
+        return;
+      }
+
+      const section = document.getElementById(id);
+
+      if (!section) return;
+
+      const sectionTop =
+        window.scrollY +
+        section.getBoundingClientRect().top;
+
+      const targetTop =
+        sectionTop - getHeaderHeight();
+
+      window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior
+      });
+    };
+
+    /*
+      Keep useful section URLs:
+      /#work
+      /#services
+      /#contact
+
+      Home is normalized to:
+      /
+    */
+    const updateUrl = (
+      id,
+      replace = false
+    ) => {
+      /*
+        Do not rewrite URLs during local file testing.
+      */
+      if (window.location.protocol === 'file:') {
+        return;
+      }
+
+      const url = new URL(window.location.href);
+
+      if (id === 'home') {
+        url.hash = '';
+      } else {
+        url.hash = id;
+      }
+
+      if (replace) {
+        history.replaceState(null, '', url);
+      } else {
+        history.pushState(null, '', url);
+      }
+    };
+
+    let selectedId = null;
+
+    const updateActiveNav = () => {
+      const headerHeight = getHeaderHeight();
+
+      const marker = Math.max(
+        headerHeight + 12,
+        window.innerHeight * 0.32
+      );
+
+      const visibleSections =
+        navSections.filter(({ section }) =>
+          isVisibleSection(section)
+        );
+
+      const hashId =
+        window.location.hash.slice(1);
+
+      const targetId =
+        selectedId ||
+        (
+          sectionIds.has(hashId)
+            ? hashId
+            : null
+        );
+
+      const targetSection =
+        targetId
+          ? document.getElementById(targetId)
+          : null;
+
+      if (
+        targetSection &&
+        isVisibleSection(targetSection)
+      ) {
+        const rect =
+          targetSection.getBoundingClientRect();
+
+        if (
+          rect.bottom > headerHeight &&
+          rect.top < window.innerHeight
+        ) {
+          setActiveNav(targetId);
+          return;
+        }
+      }
+
+      selectedId = null;
+
+      let activeId =
+        visibleSections[0]?.section.id ||
+        'home';
+
+      visibleSections.forEach(({ section }) => {
+        if (
+          section.getBoundingClientRect().top <=
+          marker
+        ) {
+          activeId = section.id;
+        }
       });
 
+      setActiveNav(activeId);
+    };
+
+    let pending = false;
+
+    const requestNavUpdate = () => {
+      if (pending) return;
+
+      pending = true;
+
+      requestAnimationFrame(() => {
+        pending = false;
+        updateActiveNav();
+      });
+    };
+
+    /*
+      Replace the browser's default anchor jump
+      with controlled positioning.
+    */
+    sectionLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const id =
+          link.getAttribute('href').slice(1);
+
+        if (!sectionIds.has(id)) return;
+
+        event.preventDefault();
+
+        selectedId = id;
+
+        setActiveNav(id);
+        updateUrl(id);
+        scrollToSection(id, 'smooth');
+
+        setTimeout(
+          requestNavUpdate,
+          350
+        );
+      });
+    });
+
+    /*
+      Correct direct links opened externally:
+      /#home
+      /#work
+      /#services
+      /#contact
+    */
+    const alignInitialHash = () => {
+      const hashId =
+        window.location.hash.slice(1);
+
+      if (!sectionIds.has(hashId)) {
+        selectedId = null;
+        setActiveNav('home');
+        return;
+      }
+
+      selectedId = hashId;
+
+      if (hashId === 'home') {
+        updateUrl('home', true);
+      }
+
+      scrollToSection(
+        hashId,
+        'auto'
+      );
+
+      setActiveNav(hashId);
+    };
+
+    /*
+      Let the browser construct the layout first,
+      then correct any automatic anchor jump.
+    */
+    if (window.location.hash) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(
+          alignInitialHash
+        );
+      });
+
+      window.addEventListener(
+        'load',
+        alignInitialHash,
+        { once: true }
+      );
+    } else {
       updateActiveNav();
-      window.addEventListener('scroll', requestNavUpdate, { passive: true });
-      window.addEventListener('resize', requestNavUpdate);
-      window.addEventListener('hashchange', requestNavUpdate);
-    })();
-  </script>
+    }
+
+    /*
+      Keep browser Back / Forward navigation
+      aligned with the same positioning rules.
+    */
+    window.addEventListener(
+      'popstate',
+      () => {
+        const hashId =
+          window.location.hash.slice(1);
+
+        const id =
+          sectionIds.has(hashId)
+            ? hashId
+            : 'home';
+
+        selectedId = id;
+
+        scrollToSection(
+          id,
+          'auto'
+        );
+
+        setActiveNav(id);
+      }
+    );
+
+    window.addEventListener(
+      'scroll',
+      requestNavUpdate,
+      { passive: true }
+    );
+
+    window.addEventListener(
+      'resize',
+      requestNavUpdate
+    );
+  })();
+</script>
 </body>
 </html>
