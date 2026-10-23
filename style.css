@@ -1959,11 +1959,11 @@ html:has(body.home-visual) {
   }
 
   .home-visual .hero h1 {
-    max-width: 11ch;
-    margin-bottom: 0;
-    font-size: clamp(2.7rem, 13vw, 3.65rem);
-    line-height: 1.08;
-  }
+  max-width: 100%;
+  margin-bottom: 0;
+  font-size: clamp(2.3rem, 10.8vw, 3.1rem);
+  line-height: 1.06;
+}
 
   .home-visual .hero-visual {
     margin-inline: -16px;
