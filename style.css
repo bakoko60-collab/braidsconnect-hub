@@ -1933,15 +1933,17 @@ html:has(body.home-visual) {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .home-visual .mobile-services-contact .button {
-  flex: 1 1 0;
-  width: auto;
+  flex: 0 0 108px;
+  width: 108px;
   min-width: 0;
-  min-height: 40px;
-  padding: 8px 16px;
+  min-height: 34px;
+  padding: 5px 10px;
+  font-size: 0.82rem;
 }
 
 .home-visual .mobile-services-contact .button {
