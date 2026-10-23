@@ -1549,7 +1549,8 @@ html:has(body.home-visual) {
 }
 
 .home-visual .mobile-headline,
-.home-visual .mobile-hero-contact {
+.home-visual .mobile-hero-contact,
+.home-visual .mobile-services-contact {
   display: none;
 }
 
@@ -1824,7 +1825,9 @@ html:has(body.home-visual) {
     display: grid;
     gap: 2px;
   }
-
+.footer-hosting > span:first-child {
+  display: none;
+}
   .footer-separator {
     display: none;
   }
@@ -1903,10 +1906,40 @@ html:has(body.home-visual) {
     display: none;
   }
 
-  .home-visual .mobile-headline,
-  .home-visual .mobile-hero-contact {
-    display: block;
-  }
+ .home-visual .mobile-headline,
+.home-visual .mobile-hero-contact,
+.home-visual .mobile-services-contact {
+  display: block;
+}
+.home-visual .mobile-services-contact {
+  margin-top: 18px;
+  padding: 18px 16px 16px;
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+}
+
+.home-visual .mobile-services-contact .eyebrow {
+  margin-bottom: 4px;
+  color: var(--amber);
+}
+
+.home-visual .mobile-services-contact > p:not(.eyebrow) {
+  margin-bottom: 14px;
+ color:rgba(255, 250, 241, 0.84);
+  font-size: 0.94rem;
+}
+
+.home-visual .mobile-services-contact .button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.home-visual .mobile-services-contact .button {
+  width: auto;
+  min-width: 112px;
+  min-height: 40px;
+  padding: 8px 20px;
+}
 
   .home-visual .hero-grid {
     gap: 18px;
